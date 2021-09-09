@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './navbar.css';
 
 export default class Navbar extends Component {
 
@@ -13,7 +14,10 @@ export default class Navbar extends Component {
                             <Link to="/posts/" className="nav-link">Posts</Link>
                         </li>
                         <li className="navbar-item">
-                            <Link to="/post/create" className="nav-link">Create New Post</Link>
+                            <Link to="/users/" className="nav-link">Users</Link>
+                        </li>
+                        <li className="navbar-item">
+                            <Link to="/post/create" className="nav-link">Create Post</Link>
                         </li>
                         <li className="navbar-item">
                             <Link to="/user/create" className="nav-link">Create User</Link>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { BASEURL } from '../consts';
+import { BASEURL } from '../../consts';
+import './create-user.css';
 
 export default class CreateUserComponent extends Component {
     constructor(props) {
@@ -113,7 +114,7 @@ export default class CreateUserComponent extends Component {
                                 onChange={this.onChangeCountry}
                         />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group submit-btn">
                         <input type="submit" value="Create User" className="btn btn-primary" />
                     </div>
                 </form>

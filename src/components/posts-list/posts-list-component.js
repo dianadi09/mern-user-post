@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
 import axios from "axios";
-import {BASEURL} from "../consts";
+import {BASEURL} from "../../consts";
 
 const Post = props => (
     <tr>
         <td>{props.post.title}</td>
         <td>{props.post.content}</td>
         <td>{props.post.posted_by}</td>
+        <td>{new Date(props.post.updated_at).toLocaleString()}</td>
         <td>
             <Link to={"/posts/update/"+props.post._id}>edit</Link> | <a href="#" onClick={() => { props.deletePost(props.post._id) }}>delete</a>
         </td>
@@ -60,6 +61,7 @@ export default class PostsListComponent extends Component {
                         <th>Title</th>
                         <th>Content</th>
                         <th>Posted By</th>
+                        <th>Updated At</th>
                     </tr>
                     </thead>
                     <tbody>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
 import axios from "axios";
-import {BASEURL} from "../consts";
+import {BASEURL} from "../../consts";
 
 const User = props => (
     <tr>
