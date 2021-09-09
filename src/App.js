@@ -9,6 +9,7 @@ import PostsList from './components/posts-list/posts-list-component';
 import UsersList from './components/users-list/users-list.component';
 import EditPost from './components/edit-post/edit-post.component';
 import EditUser from './components/edit-user/edit-user.component';
+import Home from './components/home.component';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <div className="container">
                 <Navbar />
                 <br/>
+                <Route path="/" exact component={Home} />
                 <Route path="/posts/" exact component={PostsList} />
                 <Route path="/users/" exact component={UsersList} />
                 <Route path="/posts/update/:id" component={EditPost} />
